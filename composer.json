@@ -1,0 +1,59 @@
+{
+
+    "name": "kdubuc/ddd",
+
+    "description": "DDD",
+
+    "keywords": ["ddd"],
+
+    "homepage": "https://github.com/kdubuc/ddd",
+
+    "license": "CECILL-2.1",
+
+    "authors": [
+        {
+            "role": "Developer",
+            "name": "Kevin DUBUC",
+            "email": "kevindubuc62@gmail.com",
+            "homepage": "http://kevindubuc.fr"
+        }
+    ],
+
+    "require": {
+        "php": "^7.1",
+        "doctrine/collections": "^1.4",
+        "ramsey/uuid": "^3.4",
+        "pagerfanta/pagerfanta": "^2.0"
+    },
+
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.0",
+        "phpunit/phpunit": "^8.0",
+        "sami/sami": "^4.0",
+        "mongodb/mongodb": "^1.1",
+        "doctrine/dbal": "^2.5"
+    },
+
+    "suggest": {
+        "mongodb/mongodb": "Needed to support MongoDB storages",
+        "doctrine/dbal": "Needed to support DB storages"
+    },
+
+    "autoload": {
+        "psr-4": { "API\\": "src/" }
+    },
+
+    "scripts": {
+        "code:tests": "vendor/bin/phpunit tests/",
+        "code:fix-cs": "vendor/bin/php-cs-fixer fix --config=php-cs-fixer.php",
+        "code:generate-docs": "vendor/sami/sami/sami.php update --force sami.php"
+    },
+
+    "config": {
+        "preferred-install": "source",
+        "sort-packages": true,
+        "classmap-authoritative": true,
+        "apcu-autoloader": true
+    }
+
+}
