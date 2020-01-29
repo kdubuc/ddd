@@ -122,4 +122,12 @@ class Repository
 
         return empty($this->matching($criteria));
     }
+    
+    /**
+     * Clear the repository.
+     */
+    public function clear() : void
+    {
+        return $this->storage->delete($this->class_name);
+    }
 }
