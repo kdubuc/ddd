@@ -128,6 +128,6 @@ class Repository
      */
     public function clear() : void
     {
-        return $this->storage->delete($this->class_name);
+        $this->storage->delete($this->class_name);
     }
 }
