@@ -30,7 +30,7 @@
         "friendsofphp/php-cs-fixer": "^2.0",
         "phpunit/phpunit": "^8.0",
         "sami/sami": "^4.0",
-        "mongodb/mongodb": "^1.1",
+        "mongodb/mongodb": "^1.7",
         "doctrine/dbal": "^2.5"
     },
 
