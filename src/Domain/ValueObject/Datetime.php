@@ -22,7 +22,15 @@ class Datetime extends ValueObject
      */
     public function __call($method, $parameters)
     {
-        return \call_user_func_array([$this->datetime, $method], $parameters);
+        return \call_user_func_array([$this->getDatetime(), $method], $parameters);
+    }
+    
+    /**
+     * Direct access to Datetime.
+     */
+    public function getDatetime() : DatetimeBase
+    {
+        return $this->datetime;
     }
 
     /**
