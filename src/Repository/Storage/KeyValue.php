@@ -128,7 +128,7 @@ class KeyValue implements Storage
             return;
         }
 
-        $collection = $this->select($class_name, $criteria);
+        $old_collection = $this->select($class_name, $criteria);
 
         foreach ($old_collection as $aggregate_root) {
             $collection = $this->getCollectionFor($aggregate_root);
