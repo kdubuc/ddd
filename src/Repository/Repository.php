@@ -120,7 +120,7 @@ class Repository
     {
         $criteria = Criteria::create()->where(Expression\Comparison::eq('data.id.uuid', $aggregate_root->getId()->toString()));
 
-        return empty($this->matching($criteria));
+        return !$this->matching($criteria)->isEmpty();
     }
     
     /**
