@@ -15,7 +15,7 @@ abstract class ValueObject implements JsonSerializable, Normalizable
     /**
      * Forbid construction.
      */
-    private function __construct()
+    protected function __construct()
     {
     }
 
